@@ -33,5 +33,9 @@ namespace Week2_Practice_2
         {
             _classRoster.Add(student);
         }
+        public void AddStudent(string firstName, string lastName, int csiGrade, int genEdGrade)
+        {
+            .Add()
+        }
     }
 }
