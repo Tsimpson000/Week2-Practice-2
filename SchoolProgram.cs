@@ -14,7 +14,7 @@ namespace Week2_Practice_2
         Instructor _instructor;
         List<Student> _classRoster;
 
-        public SchoolProgram(string className, string classNumber, string roomNumber, Instructor instructor, List<Student> classRoster)
+        public SchoolProgram(string className, string classNumber, string roomNumber, Instructor instructor)
         {
             _className = className;
             _classNumber = classNumber;
@@ -35,7 +35,13 @@ namespace Week2_Practice_2
         }
         public void AddStudent(string firstName, string lastName, int csiGrade, int genEdGrade)
         {
-            .Add()
+            Student student = new Student(firstName, lastName, csiGrade, genEdGrade);
+            _classRoster.Add(student);
+        }
+
+        public override string ToString()
+        {
+            return $"{ClassName} {ClassNumber} - {RoomNumber}. Number of Students - {ClassRoster.Count}";
         }
     }
 }
